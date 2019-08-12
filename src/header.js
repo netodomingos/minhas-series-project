@@ -18,21 +18,25 @@ const Header = () => {
         setOpen(!open)
     }
     return (
-        <div className='App' >
-            <Navbar color='dark' light expand='md' >
-                <NavbarBrand tag={Link} to='/' > Minhas Séries < /NavbarBrand> <NavbarToggler onClick={toggle} />
+        <div className='App container' >
+            <Navbar color='white' light expand='md' >
+                <NavbarBrand tag={Link} to='/' > Minhas Séries </NavbarBrand> <NavbarToggler onClick={toggle} />
 
-                    <Collapse isOpen={open} navbar >
-                        <Nav className='ml-auto' navbar >
-                            <NavItem >
-                                <NavLink tag={Link} to='/generos' > Genêros </NavLink>
-                            </NavItem >
-                        </Nav>
-                    </Collapse> 
-            </Navbar> 
+                <Collapse isOpen={open} navbar >
+                    <Nav className='ml-auto' navbar >
+                        <NavItem >
+                            <NavLink className='active' tag={Link} to='/generos' > Genêros </NavLink>
+                        </NavItem >
+                        <NavItem >
+                            <NavLink className='active' tag={Link} to='/series' > Séries </NavLink>
+                        </NavItem >
+
+                    </Nav>
+                </Collapse>
+            </Navbar>
         </div>
 
-            );
-        }
-        
+    );
+}
+
 export default Header;

@@ -13,7 +13,9 @@
     "reactstrap": "^8.0.1"
   },
   "scripts": {
-    "start": "react-scripts start",
+    "start": "npm-run-all build start-server",
+    "start-react": "react-scripts start",
+    "start-server": "node ./node_modules/minhas-series-server/index.js",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
@@ -33,5 +35,9 @@
       "last 1 safari version"
     ]
   },
-  "proxy": "http://localhost:3002/"
+  "proxy": "http://localhost:3002/",
+  "main": "index.js",
+  "repository": "git@github.com:donzito/minhas-series.git",
+  "author": "Neto Domingos <geraldo.dsn2000@gmail.como>",
+  "license": "MIT"
 }
